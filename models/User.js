@@ -10,10 +10,10 @@ const UserSchema = new Schema({
         type: String,
         required: [true, 'Username is required']
     },
-    images: {
+    image: {
         type: String,
     },
-    bookmarsk: [
+    bookmarks: [
         {
             type: Schema.Types.ObjectId,
             ref: 'Property'
@@ -23,6 +23,6 @@ const UserSchema = new Schema({
     timestamps: true
 })
 
-const User = models.user || model('User', UserSchema);
+const User = models.User || model('User', UserSchema);
 
 export default User;
